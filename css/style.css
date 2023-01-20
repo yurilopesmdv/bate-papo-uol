@@ -2,6 +2,43 @@ body {
     font-family: "Roboto", sans-serif;
 
 }
+.tela-login {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+.tela-login input {
+    width: 261px;
+    height: 54px;
+    text-align: center;
+    border: 1px solid #D7D7D7;
+    border-radius: 4px;
+    font-size: 18px;
+    margin-top: 92px;
+}
+.logo-login {
+    width: 130px;
+    height: 92px;
+    margin-top: 72px;
+}
+.entrar {
+    margin-top: 20px;   
+    color: #696969;
+    border-radius: 9px;
+    width: 109px;
+    height: 45px;
+    border: none;
+}
 .fundo-tela {
     height: 100%;
     width: 100%;
@@ -88,7 +125,7 @@ body {
     width: 100%;
     padding: 10px;
     margin-bottom: 5px;
-
+    line-height: 22px;
 }
 .footer {
     width: 100%;
@@ -104,7 +141,7 @@ body {
 .div-input {
     margin-left: 22px;
 }
-input {
+.footer input {
     height: 40px;
     width: 90%;
     border: none;
@@ -112,7 +149,7 @@ input {
     box-shadow: 0 0 0 0;
     outline: 0;
 }
-input::placeholder {
+.footer input::placeholder {
     color: #000000;
     font-size: 18px;
     font-style: italic;
