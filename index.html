@@ -12,13 +12,13 @@
 <body>
     <div class="tela-login">
         <img class="logo-login" src="./img/logo 1.png">
-        <input placeholder="Digite seu nome" class="input-login">
-        <button class="entrar" onclick="loadChat()">Entrar</button>
+        <input data-test="input-name" placeholder="Digite seu nome" class="input-login">
+        <button data-test="send-name" class="entrar" onclick="loadChat()">Entrar</button>
     </div>
     <div class="fundo-tela esconder-fundo" onclick="alteraMenu()"></div>
     <div class="header">
         <img class="logo" src="./img/logo 1.png">
-        <ion-icon class="perfil" name="people" onclick="alteraMenu()" ></ion-icon>
+        <button data-test="open-participants" onclick="alteraMenu()"><ion-icon class="perfil" name="people"  ></ion-icon></button>
     </div>
     <div class="content">
         <ul class="mensagens-content">
@@ -27,29 +27,29 @@
     </div>
     <div class="footer">
         <div class="div-input">
-            <input placeholder="Escreva aqui..." type="text" >
-            <p class="enviando" >Enviando para todos</p>
+            <input data-test="input-message" placeholder="Escreva aqui..." type="text" >
+            <p data-test="recipient" class="enviando" >Enviando para todos</p>
         </div>
-        <a><ion-icon class="ion-footer" name="paper-plane-outline"></ion-icon></a>
+        <button data-test="send-message" onclick="enviarMensagem()" ><ion-icon class="ion-footer" name="paper-plane-outline"></ion-icon></button>
     </div>
     <aside class="menu-lateral esconder-lateral">
         <h2 class="titulo-lista">Escolha um contato
             para enviar mensagem:</h2>
         <ul class="contatos">
-            <li class="visibilidade-publico">
+            <li data-test="all" onclick="marcarCheck(this)" class="visibilidade-publico">
                 <ion-icon name="people"></ion-icon>
                 Todos
-                <ion-icon name="checkmark-outline"></ion-icon>
+                <ion-icon class="check" name="checkmark-outline"></ion-icon>
             </li>
         </ul>
         <h2 class="titulo-lista">Escolha a visibilidade:</h2>
         <ul class="visibilidade">
             <li class="visibilidade-publico">
-                <ion-icon name="lock-open" ></ion-icon>
+                <ion-icon data-test="public" name="lock-open" ></ion-icon>
                 Publico
                 <ion-icon name="checkmark-outline" ></name=>
             </li>
-            <li class="visibilidade-reservado">
+            <li data-test="private" class="visibilidade-reservado">
                 <ion-icon name="lock-closed"></ion-icon>
                 Reservadamente
                 <ion-icon name="checkmark-outline" ></name=>
