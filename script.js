@@ -56,7 +56,10 @@ function nomeInvalido(erro) {
 function loadMessages() {
     let promise = axios.get('https://mock-api.driven.com.br/api/v6/uol/messages');
     promise.then(renderMessages);
-    //promise.catch();
+    promise.catch(reload);
+}
+function reload() {
+    window.location.reload();
 }
 function renderMessages(answer) {
     let mensagensTela = answer.data;
@@ -112,12 +115,10 @@ function enviarMensagem() {
 
 }
 function enviou() {
-    console.log("enviou");
-
     loadMessages();
 }
 function naoEnviou(erro) {
-    console.log("nao enviou");
+    window.location.reload();
 }
 
 function stayLoad() {
@@ -130,5 +131,10 @@ function loadChat() {
 
     setInterval(loadMessages, 3000);
     setInterval(stayLoad, 5000);
+    setInterval(loadPeople, 10000)
 }
-
+document.addEventListener("keyup",function (evento){
+    if(evento.key === "Enter") {
+        enviarMensagem();
+    }
+})
