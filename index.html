@@ -39,20 +39,20 @@
             <li data-test="all" onclick="marcarCheck(this)" class="visibilidade-publico">
                 <ion-icon name="people"></ion-icon>
                 Todos
-                <ion-icon class="check" name="checkmark-outline"></ion-icon>
+                <ion-icon class="check selecionado" name="checkmark-outline"></ion-icon>
             </li>
         </ul>
         <h2 class="titulo-lista">Escolha a visibilidade:</h2>
         <ul class="visibilidade">
-            <li class="visibilidade-publico">
+            <li onclick="marcarVisibilidade(this)" class="visibilidade-publico">
                 <ion-icon data-test="public" name="lock-open" ></ion-icon>
                 Publico
-                <ion-icon name="checkmark-outline" ></name=>
+                <ion-icon class="check" name="checkmark-outline" ></name=>
             </li>
-            <li data-test="private" class="visibilidade-reservado">
+            <li onclick="marcarVisibilidade(this)" data-test="private" class="visibilidade-reservado">
                 <ion-icon name="lock-closed"></ion-icon>
                 Reservadamente
-                <ion-icon name="checkmark-outline" ></name=>
+                <ion-icon class="check" name="checkmark-outline" ></name=>
             </li>
         </ul>
     </aside>

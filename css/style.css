@@ -198,7 +198,10 @@ strong {
     position: absolute;
     right: -200px;
 }
-.selecionado .check {
-
-    display:inline;
+.selecionado .check{
+    right: 10px;
+   
+}
+.selected .check{
+    right: 10px;
 }
